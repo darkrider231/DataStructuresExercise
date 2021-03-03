@@ -1,26 +1,29 @@
 // 1a
-const jedi = [
-    // 1b
-    "Luke"
-];
+const jedi = [];
+console.log(jedi);
+
+// 1b
+jedi[0] = "Luke";
+console.log(jedi);
 
 // 1c
 console.log(jedi.push("Obi-Wan Kenobi"));
 
 // 1d
 jedi.unshift("Yoda");
+console.log(jedi);
 
 // 1e
 console.log(jedi[1]);
 
 // 1f
-const obi = jedi.pop();
-console.log(obi);
+jedi.pop();
+// jedi.splice(2, 1);
 console.log(jedi);
 
 // 1g
-const yod = jedi.shift();
-console.log(yod);
+jedi.shift();
+// jedi.splice(0, 1);
 console.log(jedi);
 
 // 2a
@@ -41,7 +44,10 @@ const starWarsVillains = sithLords.concat(imperialOfficers);
 console.log(starWarsVillains);
 
 // 2d
-console.log(sithLords.slice(0, 2));
+console.log(starWarsVillains.slice(0, 2));
+// console.log(starWarsVillains.slice(0, 2));
+// console.log(starWarsVillains.slice(0, -3));
+// console.log(starWarsVillains.slice(-5, -3));
 
 // 3a
 const droids = {
@@ -58,6 +64,7 @@ console.log(droids.protocol);
 
 // 3d
 droids ["assassin"] = "IG-11";
+console.log(droids);
 
 // BONUS
 // 4
@@ -67,16 +74,25 @@ console.log(starWarsVillains[0][6]);
 console.log(starWarsVillains.slice(-4, -3));
 
 // 6a
-const starWarsMovies = {
-    episodeOne: "The Phantom Menace",
-    episodeTwo: "Attack",
-    episodeThree: "Attack of the Clones"
-};
-{
-    episodeFour: "A New Hope"
-    episodeFive: "The Empire Strikes Back"
+const starWarsMovies = [
+    {
+        episodeOne: "The Phantom Menace",
+        episodeTwo: "Attack",
+        episodeThree: "Attack of the Clones"
+    },
+    {
+        episodeFour: "A New Hope",
+        episodeFive: "The Empire Strikes Back",
+        episodeSix: "Return of the Jedi"
+    },
+    {
+        episodeSeven: "The Force Awakens",
+        episodeEight: "The Last Jedi",
+        episodeNine: "The Rise of Skywalker"
+    }
+];
 
-
-}
 
 //  6b
+starWarsMovies.splice(1, 0, "Solo", "Rogue One");
+console.log(starWarsMovies);
